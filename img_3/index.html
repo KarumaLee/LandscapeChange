@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<title>百年瞬影——北海公园历史照片展 </title> 
+
+<style>
+    .body{
+        /* background-color: rgba(214, 242, 255, 0.815); */
+        background: url(../resource/bg.jpg);
+        background-size: contain;
+        background-position: center;
+        /* height: 100vh; */
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        /* justify-items: center;   */
+        /* grid-gap: 10px; */
+        /* background-color: #BBFFFF; */
+        /* padding: 10px; */
+    }
+
+    .grid-container > div {
+        /* background-color: rgba(192, 231, 255, 0.993); */
+        text-align: center;
+        /* align-content: center; */
+        /* padding: 10px; */
+        font-size: 15px;
+    }
+
+
+
+    .head {
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end:9;  
+        grid-row-start: 0;
+        grid-row-end:5;
+    }
+
+    .canvas {
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end:9;
+        grid-row-start: 5;
+        grid-row-end:10;
+    }
+
+    .describe {
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end:9;
+        grid-row-start: 10;
+        grid-row-end:13;
+    }
+
+</style>
+
+</head>
+
+<body class="body">
+
+
+
+<script src="control.js"></script>
+<link href="style.css" >
+<!-- <id = "sample"> -->
+<style>
+    #new{
+        border: 1px solid black;
+        background-image: url('../resource/0_new.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+
+        
+        /* overflow: hidden; */
+
+        /* text-align: right; */
+    }
+    #old{
+        /* justify-self: right; */
+        height:100%;
+        
+        position: absolute;
+        overflow:hidden;
+        right: 0px;
+
+        border: 1px solid black;
+        /* float: right; */
+        /* right: 0px; */
+        /* text-align: right; */
+        
+    }
+    #old_img{
+        width:auto;
+        height: 100%;
+        
+        /* position: absolute; */
+        float: right;
+    }
+    #bt_last{
+        left:0;
+        right: 0;
+    }
+    
+
+</style>
+
+<div class='grid-container' id='mainDiv' class='mainDiv'>
+<div id='head' class='head' style='height: 20%; width: 100%;'></div>
+<div id="new" class='canvas' onmousemove="getMousePos(event)">
+    <div id="old">
+        <img id="old_img" src="../resource/0_old.jpg"/>
+    </div>
+</div>
+<div class='describe' id='div_tx'>
+   <p  id='tx'>百年瞬影——北海公园历史照片展</p> 
+</div>
+
+
+</div>
+</body>
+</html>
